@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+  <test thread-count="2" name="Test1">
+    <classes>
+      <class name="testng_parallell.LogIn"/>
+      <class name="testng_parallell.LogOut"/>
+    </classes>
+  </test> 
+  <test thread-count="2" name="Test2" parallel="true">
+    <classes>
+      <class name="testng_parallell.LogIn"/>
+      <class name="testng_parallell.LogOut"/>
+    </classes>
+  </test> 
+  <!-- Test -->
+</suite> <!-- Suite -->
+<!-- Runs in parallell acc to Thread Count
+iff tc=2,2 browser,parallell
+iff tc=0,1,1 browser,not parallell
+-->
